@@ -54,8 +54,8 @@ char* inputKey(){
 }
 
 char* encrypto(char* text, char* crypto) {
-	int textsize = sizeof(text);
-	int cryptosize = sizeof(crypto);
+	int textsize = strlen(text);
+	int cryptosize = strlen(crypto);
 
 	for(int i = 0; i < textsize; i++){
 		int j = i % (cryptosize-1);
@@ -82,8 +82,8 @@ char* encrypto(char* text, char* crypto) {
 }
 
 char* decrypto(char* text, char* crypto) {
-	int textsize = sizeof(text);
-	int cryptosize = sizeof(crypto);
+	int textsize = strlen(text);
+	int cryptosize = strlen(crypto);
 
 	for(int i = 0; i < textsize; i++){
 		int j = i % (cryptosize -1);
